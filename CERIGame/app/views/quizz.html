@@ -1,0 +1,19 @@
+<div ng-controller="quizzController">
+
+	<div ng-switch="is_end">
+		<div g-switch-default="false">
+			<p>Question : {{listQuestions[activeQuestion-1].text}}</p>
+			<ul>
+				<li ng-repeat="answer in listQuestions[activeQuestion-1].listAnswer">
+					<button ng-click="next(answer.id)">{{answer.text}}</button>
+				</li>
+			</ul>
+		</div>
+		<div ng-switch-when="true">
+			<h2>Tu as terminé le quizz !</h2>
+			<h3>Tu as {{nbGoodAnswers}} sur {{nbQuestions}} </h3>
+			<a href="/#!/home"><button>Retour Menu</button></a>
+		</div>
+	</div>
+
+</div>

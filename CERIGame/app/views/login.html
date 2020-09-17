@@ -1,0 +1,14 @@
+<div ng-controller="loginController">
+	<form novalidate class="login-form">
+		<label>Identifiant</label>
+		<input type="text" placeholder="Entre ton identifiant" ng-model="user.id">
+		<label for="">Mot de passe</label>
+		<input type="password" placeholder="Entre ton mot de passe" ng-model="user.mdp">
+		<input type="submit" ng-click="login(user)" value="Save" />
+	</form>
+
+	<pre>user = {{user | json}}</pre>
+	<pre>infoLogin = {{infoLogin | json}}</pre>
+	<pre>validation = {{validation | json}}</pre>
+	<pre>activeUserName  = {{activeUserNameLogin}}</pre>
+</div>
